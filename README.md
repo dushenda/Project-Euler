@@ -155,13 +155,13 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 **最大公因数**（英语：highest common factor，hcf）也称**最大公约数**（英语：greatest common divisor，gcd）是[数学](https://zh.wikipedia.org/wiki/%E6%95%B8%E5%AD%B8)词汇，指能够[整除](https://zh.wikipedia.org/wiki/%E6%95%B4%E9%99%A4)多个[整数](https://zh.wikipedia.org/wiki/%E6%95%B4%E6%95%B8)的最大正整数。而多个整数不能都为零。例如8和12的最大公因数为4。
 
-整数序列{\displaystyle a}![a](https://wikimedia.org/api/rest_v1/media/math/render/svg/ffd2487510aa438433a2579450ab2b3d557e5edc)的最大公因数可以记为(https://wikimedia.org/api/rest_v1/media/math/render/svg/0301ea4e20db36959a961fefe4e3e38a667964d8)或(https://wikimedia.org/api/rest_v1/media/math/render/svg/d238be4a2d65fd2d534beffe73c1a1ffa678db77)。
+整数序列![a](https://wikimedia.org/api/rest_v1/media/math/render/svg/ffd2487510aa438433a2579450ab2b3d557e5edc)的最大公因数可以记为![{\displaystyle (a_{1},a_{2},\dots ,a_{n})}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0301ea4e20db36959a961fefe4e3e38a667964d8)或{\displaystyle \gcd(a_{1},a_{2},\dots ,a_{n})}![{\displaystyle \gcd(a_{1},a_{2},\dots ,a_{n})}](https://wikimedia.org/api/rest_v1/media/math/render/svg/d238be4a2d65fd2d534beffe73c1a1ffa678db77)
 
 求两个整数最大公约数主要的方法：
 
 - [穷举法](https://zh.wikipedia.org/wiki/%E7%AA%AE%E8%88%89%E6%B3%95)：分别列出两整数的所有约数，并找出最大的公约数。
 - [素因数分解](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%9B%A0%E6%95%B8%E5%88%86%E8%A7%A3)：分别列出两数的素因数分解式，并计算共同项的[乘积](https://zh.wikipedia.org/wiki/%E4%B9%98%E7%A7%AF)。
 - [短除法](https://zh.wikipedia.org/wiki/%E7%9F%AD%E9%99%A4%E6%B3%95)：两数除以其共同[素因数](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%9B%A0%E6%95%B8)，直到两数[互素](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%B3%AA)时，所有除数的乘积即为最大公约数。
-- [辗转相除法](https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95)：两数相除，取余数重复进行相除，直到余数为{\displaystyle 0}![{\displaystyle 0}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2aae8864a3c1fec9585261791a809ddec1489950)时，前一个除数即为最大公约数。
+- [辗转相除法](https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95)：两数相除，取余数重复进行相除，直到余数为![{\displaystyle 0}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2aae8864a3c1fec9585261791a809ddec1489950)时，前一个除数即为最大公约数。
 
 ## 
