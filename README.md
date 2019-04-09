@@ -38,7 +38,7 @@
 >
 > ### 我应该从哪里开始？
 >
-> 这取决于你的背景。有两个不同顺序的解题步骤。 [Recent](https://projecteuler.net/recent) 问题表列出了最近发布的十个问题，因此如果您是`Project Euler`的新手，那么您可能更愿意从 [Archives](https：// projecteuler .net / archives) 开始了解我们问题的不同类型/困难。通常认为第一百个问题比后面的问题容易。在档案表中，您将能够看到有多少人解决了每个问题;作为一般的经验法则，解决它的人越多，就越容易。为了进一步提供帮助，有一个难度评级系统，它也可以帮助您决定从哪里开始。您可以在存档表中 ID，Solved By 或 Difficulty 中的问题进行排序。
+> 这取决于你的背景。有两个不同顺序的解题步骤。 [Recent](https://projecteuler.net/recent) 问题表列出了最近发布的十个问题，因此如果您是`Project Euler`的新手，那么您可能更愿意从 [Archives](https://projecteuler.net/archives) 开始了解我们问题的不同类型/困难。通常认为第一百个问题比后面的问题容易。在档案表中，您将能够看到有多少人解决了每个问题;作为一般的经验法则，解决它的人越多，就越容易。为了进一步提供帮助，有一个难度评级系统，它也可以帮助您决定从哪里开始。您可以在存档表中 ID，Solved By 或 Difficulty 中的问题进行排序。
 >
 > ### 我已经编写了我的程序但是需要几天才能得到答案吗？
 >
@@ -100,7 +100,7 @@ What is the largest prime factor of the number 600851475143 ?
 
 13195 的素数因子是 5,7,13 和 29。
 
-600851475143 的最素数因子是什么？
+600851475143 的最大素数因子是什么？
 
 ## [[add]  Collatz conjecture](https://zh.wikipedia.org/wiki/%E8%80%83%E6%8B%89%E5%85%B9%E7%8C%9C%E6%83%B3)
 
