@@ -164,4 +164,22 @@ What is the smallest positive number that is evenly divisible by all of the numb
 - [短除法](https://zh.wikipedia.org/wiki/%E7%9F%AD%E9%99%A4%E6%B3%95)：两数除以其共同[素因数](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%9B%A0%E6%95%B8)，直到两数[互素](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%B3%AA)时，所有除数的乘积即为最大公约数。
 - [辗转相除法](https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95)：两数相除，取余数重复进行相除，直到余数为![{\displaystyle 0}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2aae8864a3c1fec9585261791a809ddec1489950)时，前一个除数即为最大公约数。
 
+最小公倍数可以通过多种方法得到，最直接的方法是列举法，从小到大列举出其中一个数（如最大数）的倍数，当这个倍数也是另一个数的倍数时，就求得最小公倍数。另一个方法是利用公式{\displaystyle \operatorname {lcm} (a_{1},a_{2})={\frac {a_{1}a_{2}}{\gcd(a_{1},a_{2})}}}![\operatorname {lcm}(a_{1},a_{2})={\frac  {a_{1}a_{2}}{\gcd(a_{1},a_{2})}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0b311081f8e412bdcb66d43a9d36c1f60aec031b)来求解，这时首先要知道它们的最大公因数。而最大公因数可以通过[短除法](https://zh.wikipedia.org/wiki/%E7%9F%AD%E9%99%A4%E6%B3%95)得到。
+
+利用整数的[唯一分解定理](https://zh.wikipedia.org/wiki/%E7%AE%97%E6%9C%AF%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86)，还可以用[质因数分解](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%9B%A0%E6%95%B8%E5%88%86%E8%A7%A3)法。将每个整数进行质因数分解。对每个质数，在质因数分解的表达式中寻找次数最高的乘幂，最后将所有这些质数乘幂相乘就可以得到最小公倍数。譬如求**216**、**384**和**210**的最小公倍数。对**216**、**384**和**210**来说：
+
+**最小公倍数**
+
+可以递归求出多个整数的最小公倍数：欲求 {\displaystyle \operatorname {lcm} (a_{1},...,a_{n})(n\geq 3)}![{\displaystyle \operatorname {lcm} (a_{1},...,a_{n})(n\geq 3)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/52e198b017f041f550708e0f9d4addcb51bfbd2b)，只需求 {\displaystyle \operatorname {lcm} (a_{1},...,a_{n-2},\operatorname {lcm} (a_{n-1},a_{n}))}![{\displaystyle \operatorname {lcm} (a_{1},...,a_{n-2},\operatorname {lcm} (a_{n-1},a_{n}))}](https://wikimedia.org/api/rest_v1/media/math/render/svg/122ac76333fe48a3f5a85306a67996343ff6e3fb)。
+
+这利用了性质 {\displaystyle \operatorname {lcm} (a_{1},a_{2},a_{3})=\operatorname {lcm} (\operatorname {lcm} (a_{1},a_{2}),a_{3})}![{\displaystyle \operatorname {lcm} (a_{1},a_{2},a_{3})=\operatorname {lcm} (\operatorname {lcm} (a_{1},a_{2}),a_{3})}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0af6078d9ad03203f1bd10f4b09e65942c56aa51)。该性质证明如下：
+
+记 {\displaystyle a_{1},a_{2},a_{3}}![a_1,a_2,a_3](https://wikimedia.org/api/rest_v1/media/math/render/svg/dd8e11b0b055a7c3471e39b9742a8e7df9883e99) 的质因数分解分别为{\displaystyle \prod _{i=1}^{n}p_{i}^{e_{1i}},\prod _{i=1}^{n}p_{i}^{e_{2i}},\prod _{i=1}^{n}p_{i}^{e_{3i}}}![{\displaystyle \prod _{i=1}^{n}p_{i}^{e_{1i}},\prod _{i=1}^{n}p_{i}^{e_{2i}},\prod _{i=1}^{n}p_{i}^{e_{3i}}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2724d3c65d08db193097d845a1e5a33507e355eb)，其中 {\displaystyle p_{i}}![p_{i}](https://wikimedia.org/api/rest_v1/media/math/render/svg/5bab39399bf5424f25d957cdc57c84a0622626d2) 是第 {\displaystyle i}![i](https://wikimedia.org/api/rest_v1/media/math/render/svg/add78d8608ad86e54951b8c8bd6c8d8416533d20) 个质数。
+
+那么根据最小公倍数的定义，{\displaystyle \operatorname {lcm} (a_{1},a_{2},a_{3})=\prod _{i=1}^{n}p_{i}^{\max(e_{1i},e_{2i},e_{3i})}}![{\displaystyle \operatorname {lcm} (a_{1},a_{2},a_{3})=\prod _{i=1}^{n}p_{i}^{\max(e_{1i},e_{2i},e_{3i})}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/3db12252576cc6381470d5fdf178c904cbdf464f)，
+
+{\displaystyle \operatorname {lcm} (\operatorname {lcm} (a_{1},a_{2}),a_{3})=\operatorname {lcm} (\prod _{i=1}^{n}p_{i}^{\max(e_{1i},e_{2i})},a_{3})=\prod _{i=1}^{n}p_{i}^{\max(\max(e_{1i},e_{2i}),e_{3i})}=\prod _{i=1}^{n}p_{i}^{\max(e_{1i},e_{2i},e_{3i})}}![{\displaystyle \operatorname {lcm} (\operatorname {lcm} (a_{1},a_{2}),a_{3})=\operatorname {lcm} (\prod _{i=1}^{n}p_{i}^{\max(e_{1i},e_{2i})},a_{3})=\prod _{i=1}^{n}p_{i}^{\max(\max(e_{1i},e_{2i}),e_{3i})}=\prod _{i=1}^{n}p_{i}^{\max(e_{1i},e_{2i},e_{3i})}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/c94b90f09601b56a13b8dbd1214e5368fd8162d5)，
+
+证毕。
+
 ## 
