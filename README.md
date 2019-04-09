@@ -164,7 +164,7 @@ What is the smallest positive number that is evenly divisible by all of the numb
 - [短除法](https://zh.wikipedia.org/wiki/%E7%9F%AD%E9%99%A4%E6%B3%95)：两数除以其共同[素因数](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%9B%A0%E6%95%B8)，直到两数[互素](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%B3%AA)时，所有除数的乘积即为最大公约数。
 - [辗转相除法](https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95)：两数相除，取余数重复进行相除，直到余数为![{\displaystyle 0}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2aae8864a3c1fec9585261791a809ddec1489950)时，前一个除数即为最大公约数。
 
-最小公倍数可以通过多种方法得到，最直接的方法是列举法，从小到大列举出其中一个数（如最大数）的倍数，当这个倍数也是另一个数的倍数时，就求得最小公倍数。另一个方法是利用公式{\displaystyle \operatorname {lcm} (a_{1},a_{2})={\frac {a_{1}a_{2}}{\gcd(a_{1},a_{2})}}}![\operatorname {lcm}(a_{1},a_{2})={\frac  {a_{1}a_{2}}{\gcd(a_{1},a_{2})}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0b311081f8e412bdcb66d43a9d36c1f60aec031b)来求解，这时首先要知道它们的最大公因数。而最大公因数可以通过[短除法](https://zh.wikipedia.org/wiki/%E7%9F%AD%E9%99%A4%E6%B3%95)得到。
+最小公倍数可以通过多种方法得到，最直接的方法是列举法，从小到大列举出其中一个数（如最大数）的倍数，当这个倍数也是另一个数的倍数时，就求得最小公倍数。另一个方法是利用公式![\operatorname {lcm}(a_{1},a_{2})={\frac  {a_{1}a_{2}}{\gcd(a_{1},a_{2})}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0b311081f8e412bdcb66d43a9d36c1f60aec031b)来求解，这时首先要知道它们的最大公因数。而最大公因数可以通过[短除法](https://zh.wikipedia.org/wiki/%E7%9F%AD%E9%99%A4%E6%B3%95)得到。
 
 利用整数的[唯一分解定理](https://zh.wikipedia.org/wiki/%E7%AE%97%E6%9C%AF%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86)，还可以用[质因数分解](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%9B%A0%E6%95%B8%E5%88%86%E8%A7%A3)法。将每个整数进行质因数分解。对每个质数，在质因数分解的表达式中寻找次数最高的乘幂，最后将所有这些质数乘幂相乘就可以得到最小公倍数。譬如求**216**、**384**和**210**的最小公倍数。对**216**、**384**和**210**来说：
 
