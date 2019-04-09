@@ -153,25 +153,29 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 ## [[Add]Highest common factor](https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E6%95%B8)
 
-**最大公因数**（英语：highest common factor，hcf）也称**最大公约数**（英语：greatest common divisor，gcd）是[数学](https://zh.wikipedia.org/wiki/%E6%95%B8%E5%AD%B8)词汇，指能够[整除](https://zh.wikipedia.org/wiki/%E6%95%B4%E9%99%A4)多个[整数](https://zh.wikipedia.org/wiki/%E6%95%B4%E6%95%B8)的最大正整数。而多个整数不能都为零。例如 8 和 12 的最大公因数为 4。
-
-整数序列![a](https://wikimedia.org/api/rest_v1/media/math/render/svg/ffd2487510aa438433a2579450ab2b3d557e5edc)的最大公因数可以记为![{\displaystyle (a_{1},a_{2},\dots ,a_{n})}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0301ea4e20db36959a961fefe4e3e38a667964d8)或![{\displaystyle \gcd(a_{1},a_{2},\dots ,a_{n})}](https://wikimedia.org/api/rest_v1/media/math/render/svg/d238be4a2d65fd2d534beffe73c1a1ffa678db77)。
-
-求两个整数最大公约数主要的方法：
-
-- [穷举法](https://zh.wikipedia.org/wiki/%E7%AA%AE%E8%88%89%E6%B3%95)：分别列出两整数的所有约数，并找出最大的公约数。
-- [素因数分解](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%9B%A0%E6%95%B8%E5%88%86%E8%A7%A3)：分别列出两数的素因数分解式，并计算共同项的[乘积](https://zh.wikipedia.org/wiki/%E4%B9%98%E7%A7%AF)。
-- [短除法](https://zh.wikipedia.org/wiki/%E7%9F%AD%E9%99%A4%E6%B3%95)：两数除以其共同[素因数](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%9B%A0%E6%95%B8)，直到两数[互素](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%B3%AA)时，所有除数的乘积即为最大公约数。
-- [辗转相除法](https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95)：两数相除，取余数重复进行相除，直到余数为![{\displaystyle 0}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2aae8864a3c1fec9585261791a809ddec1489950)时，前一个除数即为最大公约数。
-
-最小公倍数可以通过多种方法得到，最直接的方法是列举法，从小到大列举出其中一个数（如最大数）的倍数，当这个倍数也是另一个数的倍数时，就求得最小公倍数。另一个方法是利用公式![\operatorname {lcm}(a_{1},a_{2})={\frac  {a_{1}a_{2}}{\gcd(a_{1},a_{2})}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0b311081f8e412bdcb66d43a9d36c1f60aec031b)来求解，这时首先要知道它们的最大公因数。而最大公因数可以通过[短除法](https://zh.wikipedia.org/wiki/%E7%9F%AD%E9%99%A4%E6%B3%95)得到。
-
-利用整数的[唯一分解定理](https://zh.wikipedia.org/wiki/%E7%AE%97%E6%9C%AF%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86)，还可以用[质因数分解](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%9B%A0%E6%95%B8%E5%88%86%E8%A7%A3)法。将每个整数进行质因数分解。对每个质数，在质因数分解的表达式中寻找次数最高的乘幂，最后将所有这些质数乘幂相乘就可以得到最小公倍数。譬如求**216**、**384**和**210**的最小公倍数。对**216**、**384**和**210**来说：
+> **最大公因数**（英语：highest common factor，hcf）也称**最大公约数**（英语：greatest common divisor，gcd）是[数学](https://zh.wikipedia.org/wiki/%E6%95%B8%E5%AD%B8)词汇，指能够[整除](https://zh.wikipedia.org/wiki/%E6%95%B4%E9%99%A4)多个[整数](https://zh.wikipedia.org/wiki/%E6%95%B4%E6%95%B8)的最大正整数。而多个整数不能都为零。例如 8 和 12 的最大公因数为 4。
+>
+> 整数序列![a](https://wikimedia.org/api/rest_v1/media/math/render/svg/ffd2487510aa438433a2579450ab2b3d557e5edc)的最大公因数可以记为![{\displaystyle (a_{1},a_{2},\dots ,a_{n})}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0301ea4e20db36959a961fefe4e3e38a667964d8)或![{\displaystyle \gcd(a_{1},a_{2},\dots ,a_{n})}](https://wikimedia.org/api/rest_v1/media/math/render/svg/d238be4a2d65fd2d534beffe73c1a1ffa678db77)。
+>
+> 求两个整数最大公约数主要的方法：
+>
+> - [穷举法](https://zh.wikipedia.org/wiki/%E7%AA%AE%E8%88%89%E6%B3%95)：分别列出两整数的所有约数，并找出最大的公约数。
+> - [素因数分解](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%9B%A0%E6%95%B8%E5%88%86%E8%A7%A3)：分别列出两数的素因数分解式，并计算共同项的[乘积](https://zh.wikipedia.org/wiki/%E4%B9%98%E7%A7%AF)。
+> - [短除法](https://zh.wikipedia.org/wiki/%E7%9F%AD%E9%99%A4%E6%B3%95)：两数除以其共同[素因数](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%9B%A0%E6%95%B8)，直到两数[互素](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%B3%AA)时，所有除数的乘积即为最大公约数。
+> - [辗转相除法](https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95)：两数相除，取余数重复进行相除，直到余数为![{\displaystyle 0}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2aae8864a3c1fec9585261791a809ddec1489950)时，前一个除数即为最大公约数。
+>
+> 最小公倍数可以通过多种方法得到，最直接的方法是列举法，从小到大列举出其中一个数（如最大数）的倍数，当这个倍数也是另一个数的倍数时，就求得最小公倍数。另一个方法是利用公式![\operatorname {lcm}(a_{1},a_{2})={\frac  {a_{1}a_{2}}{\gcd(a_{1},a_{2})}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0b311081f8e412bdcb66d43a9d36c1f60aec031b)来求解，这时首先要知道它们的最大公因数。而最大公因数可以通过[短除法](https://zh.wikipedia.org/wiki/%E7%9F%AD%E9%99%A4%E6%B3%95)得到。
+>
+> 利用整数的[唯一分解定理](https://zh.wikipedia.org/wiki/%E7%AE%97%E6%9C%AF%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86)，还可以用[质因数分解](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%9B%A0%E6%95%B8%E5%88%86%E8%A7%A3)法。将每个整数进行质因数分解。对每个质数，在质因数分解的表达式中寻找次数最高的乘幂，最后将所有这些质数乘幂相乘就可以得到最小公倍数。譬如求**216**、**384**和**210**的最小公倍数。对**216**、**384**和**210**来说：
 
 ## [[Add]least common multiple](https://zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B8)
 
-**最小公倍数**是[数论](https://zh.wikipedia.org/wiki/%E6%95%B0%E8%AE%BA)中的一个概念。若有一个数![X](https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab)，可以被另外两个数![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)、}![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)整除，且![X](https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab)大于（或等于）![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)和![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)，则![X](https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab)为![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)和![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)的公倍数。![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)和![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)的公倍数有无限个，而所有的公倍数中，最小的公倍数就叫做最小公倍数。两个[整数](https://zh.wikipedia.org/wiki/%E6%95%B4%E6%95%B8)公有的倍数称为它们的**公倍数**，其中最小的一个[正整数](https://zh.wikipedia.org/wiki/%E6%AD%A3%E6%95%B4%E6%95%B0)称为它们两个的最小公倍数。同样地，若干个整数公有的倍数中最小的正整数称为它们的最小公倍数。![n](https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b)整数![[a_1, a_2, \cdots , a_n]](https://wikimedia.org/api/rest_v1/media/math/render/svg/c04066d337f0d82ae8d415aa318b7f5697ec86ae)，或者参照英文记法记作![\operatorname{lcm}(a_1, a_2, \cdots , a_n)](https://wikimedia.org/api/rest_v1/media/math/render/svg/0fa7637b4746aced59751cf32e2df86addb28791)，其中**lcm**是英语中“最小公倍数”一词（*least common multiple*）的首字母缩写。
-
-对[分数](https://zh.wikipedia.org/wiki/%E5%88%86%E6%95%B8)进行加减运算时，要求两数的分母相同才能计算，故需要通分；标准的计算步骤是将两个分数的分母通分成它们的最小公倍数，然后将通分后的分子相加。
+> **最小公倍数**是[数论](https://zh.wikipedia.org/wiki/%E6%95%B0%E8%AE%BA)中的一个概念。若有一个数![X](https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab)，可以被另外两个数![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)、}![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)整除，且![X](https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab)大于（或等于）![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)和![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)，则![X](https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab)为![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)和![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)的公倍数。![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)和![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)的公倍数有无限个，而所有的公倍数中，最小的公倍数就叫做最小公倍数。两个[整数](https://zh.wikipedia.org/wiki/%E6%95%B4%E6%95%B8)公有的倍数称为它们的**公倍数**，其中最小的一个[正整数](https://zh.wikipedia.org/wiki/%E6%AD%A3%E6%95%B4%E6%95%B0)称为它们两个的最小公倍数。同样地，若干个整数公有的倍数中最小的正整数称为它们的最小公倍数。![n](https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b)整数![[a_1, a_2, \cdots , a_n]](https://wikimedia.org/api/rest_v1/media/math/render/svg/c04066d337f0d82ae8d415aa318b7f5697ec86ae)，或者参照英文记法记作![\operatorname{lcm}(a_1, a_2, \cdots , a_n)](https://wikimedia.org/api/rest_v1/media/math/render/svg/0fa7637b4746aced59751cf32e2df86addb28791)，其中**lcm**是英语中“最小公倍数”一词（*least common multiple*）的首字母缩写。
+>
+> 对[分数](https://zh.wikipedia.org/wiki/%E5%88%86%E6%95%B8)进行加减运算时，要求两数的分母相同才能计算，故需要通分；标准的计算步骤是将两个分数的分母通分成它们的最小公倍数，然后将通分后的分子相加。
+>
+> [^维基百科]: 
+>
+> 
 
 ## 
