@@ -155,7 +155,7 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 **最大公因数**（英语：highest common factor，hcf）也称**最大公约数**（英语：greatest common divisor，gcd）是[数学](https://zh.wikipedia.org/wiki/%E6%95%B8%E5%AD%B8)词汇，指能够[整除](https://zh.wikipedia.org/wiki/%E6%95%B4%E9%99%A4)多个[整数](https://zh.wikipedia.org/wiki/%E6%95%B4%E6%95%B8)的最大正整数。而多个整数不能都为零。例如8和12的最大公因数为4。
 
-整数序列![a](https://wikimedia.org/api/rest_v1/media/math/render/svg/ffd2487510aa438433a2579450ab2b3d557e5edc)的最大公因数可以记为![{\displaystyle (a_{1},a_{2},\dots ,a_{n})}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0301ea4e20db36959a961fefe4e3e38a667964d8)或{\displaystyle \gcd(a_{1},a_{2},\dots ,a_{n})}![{\displaystyle \gcd(a_{1},a_{2},\dots ,a_{n})}](https://wikimedia.org/api/rest_v1/media/math/render/svg/d238be4a2d65fd2d534beffe73c1a1ffa678db77)
+整数序列![a](https://wikimedia.org/api/rest_v1/media/math/render/svg/ffd2487510aa438433a2579450ab2b3d557e5edc)的最大公因数可以记为![{\displaystyle (a_{1},a_{2},\dots ,a_{n})}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0301ea4e20db36959a961fefe4e3e38a667964d8)或![{\displaystyle \gcd(a_{1},a_{2},\dots ,a_{n})}](https://wikimedia.org/api/rest_v1/media/math/render/svg/d238be4a2d65fd2d534beffe73c1a1ffa678db77)。
 
 求两个整数最大公约数主要的方法：
 
