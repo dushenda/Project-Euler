@@ -100,7 +100,7 @@ What is the largest prime factor of the number 600851475143 ?
 
 13195 的素数因子是 5,7,13 和 29。
 
-600851475143 的最大素数因子是什么？
+600851475143 的最大素数因子是多少？
 
 ## [[add]  Collatz conjecture](https://zh.wikipedia.org/wiki/%E8%80%83%E6%8B%89%E5%85%B9%E7%8C%9C%E6%83%B3)
 
@@ -148,3 +148,5 @@ What is the smallest positive number that is evenly divisible by all of the numb
 2520 可以整除 1 到 10 中的每个数字。
 
 可以被 1 到 20 的所有数字整除的最小正数是多少？
+
+其实也就是求最小公倍数。
