@@ -170,7 +170,7 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 ## [[Add]least common multiple](https://zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B8)
 
-> **最小公倍数**是[数论](https://zh.wikipedia.org/wiki/%E6%95%B0%E8%AE%BA)中的一个概念。若有一个数![X](https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab)，可以被另外两个数![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)、}![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)整除，且![X](https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab)大于（或等于）![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)和![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)，则![X](https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab)为![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)和![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)的公倍数。![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)和![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)的公倍数有无限个，而所有的公倍数中，最小的公倍数就叫做最小公倍数。两个[整数](https://zh.wikipedia.org/wiki/%E6%95%B4%E6%95%B8)公有的倍数称为它们的**公倍数**，其中最小的一个[正整数](https://zh.wikipedia.org/wiki/%E6%AD%A3%E6%95%B4%E6%95%B0)称为它们两个的最小公倍数。同样地，若干个整数公有的倍数中最小的正整数称为它们的最小公倍数。![n](https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b)整数![[a_1, a_2, \cdots , a_n]](https://wikimedia.org/api/rest_v1/media/math/render/svg/c04066d337f0d82ae8d415aa318b7f5697ec86ae)，或者参照英文记法记作![\operatorname{lcm}(a_1, a_2, \cdots , a_n)](https://wikimedia.org/api/rest_v1/media/math/render/svg/0fa7637b4746aced59751cf32e2df86addb28791)，其中**lcm**是英语中“最小公倍数”一词（*least common multiple*）的首字母缩写。
+> **最小公倍数**是[数论](https://zh.wikipedia.org/wiki/%E6%95%B0%E8%AE%BA)中的一个概念。若有一个数![X](https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab)，可以被另外两个数![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)、![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)整除，且![X](https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab)大于（或等于）![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)和![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)，则![X](https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab)为![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)和![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)的公倍数。![A](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3)和![B](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a)的公倍数有无限个，而所有的公倍数中，最小的公倍数就叫做最小公倍数。两个[整数](https://zh.wikipedia.org/wiki/%E6%95%B4%E6%95%B8)公有的倍数称为它们的**公倍数**，其中最小的一个[正整数](https://zh.wikipedia.org/wiki/%E6%AD%A3%E6%95%B4%E6%95%B0)称为它们两个的最小公倍数。同样地，若干个整数公有的倍数中最小的正整数称为它们的最小公倍数。![n](https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b)整数![[a_1, a_2, \cdots , a_n]](https://wikimedia.org/api/rest_v1/media/math/render/svg/c04066d337f0d82ae8d415aa318b7f5697ec86ae)，或者参照英文记法记作![\operatorname{lcm}(a_1, a_2, \cdots , a_n)](https://wikimedia.org/api/rest_v1/media/math/render/svg/0fa7637b4746aced59751cf32e2df86addb28791)，其中**lcm**是英语中“最小公倍数”一词（*least common multiple*）的首字母缩写。
 >
 > 对[分数](https://zh.wikipedia.org/wiki/%E5%88%86%E6%95%B8)进行加减运算时，要求两数的分母相同才能计算，故需要通分；标准的计算步骤是将两个分数的分母通分成它们的最小公倍数，然后将通分后的分子相加。
 
@@ -199,3 +199,13 @@ Find the difference between the sum of the squares of the first one hundred natu
 因此平方和和和的平方之差为 3025 - 385 = 2640。
 
 求前 100 个自然数的和平方和平方和的差。
+
+## [7.10001st prime](https://projecteuler.net/problem=7)
+
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+
+What is the 10 001st prime number?
+
+通过列举前 6 个素数：2，3，5，7，11，13我们可以发现 13 是第 6 个素数
+
+那么第 10001 个素数是多少。
