@@ -237,7 +237,7 @@ The four adjacent digits in the 1000-digit number that have the greatest product
 
 Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
-具有最大乘积的1000位数字中的四个相邻数字是9×9×8×9 = 5832。
+在这 1000 个数中，具有最大乘积的的四个相邻数字是9×9×8×9 = 5832。
 
 73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
@@ -260,4 +260,4 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450
 
-找到具有最大乘积的1000位数字中的 13 个相邻数字。 这个乘积是多少？
+找到在 1000 位数字中具有最大乘积的  13 个相邻数字。 这个乘积是多少？
