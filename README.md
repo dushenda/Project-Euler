@@ -174,4 +174,28 @@ What is the smallest positive number that is evenly divisible by all of the numb
 >
 > 对[分数](https://zh.wikipedia.org/wiki/%E5%88%86%E6%95%B8)进行加减运算时，要求两数的分母相同才能计算，故需要通分；标准的计算步骤是将两个分数的分母通分成它们的最小公倍数，然后将通分后的分子相加。
 
-## 
+## [6.Sum square difference](https://projecteuler.net/problem=6)
+
+The sum of the squares of the first ten natural numbers is,
+
+![](./img/P6_1.png)
+
+The square of the sum of the first ten natural numbers is,
+
+![](./img/P6_2.png)
+
+Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+
+Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+
+前 10 个自然数的平方和为，
+
+![](./img/P6_1.png)
+
+这些数的和的平方为，
+
+![](./img/P6_2.png)
+
+因此平方和和和的平方之差为 3025 - 385 = 2640。
+
+求前 100 个自然数的和平方和平方和的差。
