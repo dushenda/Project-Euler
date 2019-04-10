@@ -1,8 +1,9 @@
-x=1:10;
-x(end+1)=11;
-
-function y=findPrime(x)
-for i=1:(max(size(x))-1)
-    y = mod(x,x(i));
+x=2;
+i=3;
+while(max(size(x))<10001)
+    if(mod(i,x)~=0)
+        x(end+1) = i;
+    end
+    i=i+1;
 end
-end
+disp(x(end));
