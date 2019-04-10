@@ -261,3 +261,16 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 71636269561882670428252483600823257530420752963450
 
 找到在 1000 位数字中具有最大乘积的  13 个相邻数字。 这个乘积是多少？
+
+## [9.Special Pythagorean triplet](https://projecteuler.net/problem=9)
+
+A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
+
+![](./img/P9_1.png)
+
+For example,
+
+![](./img/P9_2.png)
+
+There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+Find the product abc.
