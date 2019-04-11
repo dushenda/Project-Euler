@@ -368,3 +368,69 @@ Find the product *abc*.
 > [推广](https://zh.wikipedia.org/w/index.php?title=%E5%8B%BE%E8%82%A1%E6%95%B0&action=edit&section=5)
 >
 > [费马最后定理](https://zh.wikipedia.org/wiki/%E8%B4%B9%E9%A9%AC%E6%9C%80%E5%90%8E%E5%AE%9A%E7%90%86)指出，若![a^{n}+b^{n}=c^{n}](https://wikimedia.org/api/rest_v1/media/math/render/svg/1a2e31ced64b8cef38ab186ec86755ecc47c861f)，而![n](https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b)是大于 2 的整数，![(a,b,c)](https://wikimedia.org/api/rest_v1/media/math/render/svg/ae973a762a92b9cd3eafe7f283890ccfa9b887e8)即没有正整数解。
+
+## [10Summation of primes](https://projecteuler.net/problem=10)
+
+The sum of the primes below 10 is  2 + 3 + 5 + 7 = 17.
+
+Find the sum of all the primes below two million.
+
+10 以下素数的和为 2+3+5+7 = 17。
+
+找到 2,000,000 以下的所有素数和。
+
+> [**埃拉托斯特尼筛法**](https://zh.wikipedia.org/wiki/%E5%9F%83%E6%8B%89%E6%89%98%E6%96%AF%E7%89%B9%E5%B0%BC%E7%AD%9B%E6%B3%95)
+>
+> [**步骤**](https://zh.wikipedia.org/w/index.php?title=%E5%9F%83%E6%8B%89%E6%89%98%E6%96%AF%E7%89%B9%E5%B0%BC%E7%AD%9B%E6%B3%95&action=edit&section=2)
+>
+> [![埃拉托斯特尼筛法](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sieve_of_Eratosthenes_animation.gif/350px-Sieve_of_Eratosthenes_animation.gif)](https://zh.wikipedia.org/wiki/File:Sieve_of_Eratosthenes_animation.gif)
+>
+> 详细列出算法如下：
+>
+> 1. 列出2以后的所有序列：
+>    - 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+> 2. 标出序列中的第一个质数，也就是2，序列变成：
+>    - 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+> 3. 将剩下序列中，划摽2的倍数（用红色标出），序列变成：
+>    - 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+> 4. 如果现在这个序列中最大数小于等于最后一个标出的素数的平方，那么剩下的序列中所有的数都是质数，否则回到第二步。
+>
+> ------
+>
+> 1. 本例中，因为25大于2的平方，我们返回第二步：
+> 2. 剩下的序列中第一个质数是3，将主序列中3的倍数划出（红色），主序列变成：
+>    - 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+>
+> 1. 我们得到的质数有：2，3
+> 2. 25仍然大于3的平方，所以我们还要返回第二步：
+> 3. 现在序列中第一个质数是5，同样将序列中5的倍数划出，主序列成了：
+>    - 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+> 4. 我们得到的质数有：2, 3, 5 。
+> 5. 因为25等于5的平方，结束循环
+>
+> 结论：去掉红色的数字，2到25之间的质数是：2, 3, 5, 7, 11, 13, 17, 19, 23。
+>
+> **算法**
+>
+> 埃拉托斯特尼筛法，可以用以下的[伪代码](https://zh.wikipedia.org/wiki/%E4%BC%AA%E4%BB%A3%E7%A0%81)来表示：
+>
+> ```
+> Input: an integer n > 1
+>  
+> Let A be an array of Boolean values, indexed by integers 2 to n,
+> initially all set to true.
+>  
+>  for i = 2, 3, 4, ..., not exceeding 
+>   
+>     
+>     {\displaystyle {\sqrt {n}}}
+>   
+> :
+>   if A[i] is true:
+>     for j = i2, i2+i, i2+2i, i2+3i, ..., not exceeding n :
+>       A[j] := false
+>  
+> Output: all i such that A[i] is true.
+> ```
+>
+> 以上算法可以得到小于等于*n*的所有[素数](https://zh.wikipedia.org/wiki/%E8%B3%AA%E6%95%B8)，它的复杂度是O(*n* log log *n*)。
