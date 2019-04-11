@@ -275,3 +275,4 @@ For example,
 There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product *abc*.
 
+找出和为 1000 的三个勾股数的乘积。
