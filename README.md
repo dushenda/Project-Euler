@@ -276,3 +276,95 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product *abc*.
 
 找出和为 1000 的三个勾股数的乘积。
+
+> [勾股数](https://zh.wikipedia.org/w/index.php?title=%E5%8B%BE%E8%82%A1%E6%95%B0&action=edit&section=0&summary=/%20top%20/%20)
+>
+> [![Rtriangle.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Rtriangle.svg/200px-Rtriangle.svg.png)](https://zh.wikipedia.org/wiki/File:Rtriangle.svg)
+>
+> **勾股数**，又名**商高数**或**毕氏数**（Pythagorean triple），是由三个[正整数](https://zh.wikipedia.org/wiki/%E6%AD%A3%E6%95%B4%E6%95%B0)组成的数组；能符合[勾股定理](https://zh.wikipedia.org/wiki/%E5%8B%BE%E8%82%A1%E5%AE%9A%E7%90%86)![a^{2}+b^{2}=c^{2}](https://wikimedia.org/api/rest_v1/media/math/render/svg/7ef0a5a4b8ab98870ae5d6d7c7b4dfe3fb6612e2)（毕式定理之中，![(a,b,c)](https://wikimedia.org/api/rest_v1/media/math/render/svg/ae973a762a92b9cd3eafe7f283890ccfa9b887e8)的正整数解。而且，基于勾股定理的[逆定理](https://zh.wikipedia.org/wiki/%E5%AE%9A%E7%90%86)，任何[边长](https://zh.wikipedia.org/wiki/%E8%BE%B9%E9%95%BF)是勾股数组的[三角形](https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E5%BD%A2)都是[直角三角形](https://zh.wikipedia.org/wiki/%E7%9B%B4%E8%A7%92%E4%B8%89%E8%A7%92%E5%BD%A2)。
+>
+> 如果![(a,b,c)](https://wikimedia.org/api/rest_v1/media/math/render/svg/ae973a762a92b9cd3eafe7f283890ccfa9b887e8)是勾股数，它们的正整数[倍数](https://zh.wikipedia.org/wiki/%E5%80%8D%E6%95%B8)，也是勾股数，即![{\displaystyle (na,nb,nc)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/bba61533a06ff5576bc12f078191b5835a1ba22d)也是勾股数。若果![(a,b,c)](https://wikimedia.org/api/rest_v1/media/math/render/svg/ae973a762a92b9cd3eafe7f283890ccfa9b887e8)三者[互质](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%B3%AA)（它们的[最大公因数](https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E6%95%B8)是 1），它们就称为**素勾股数**。
+>
+> [**找出勾股数**](https://zh.wikipedia.org/w/index.php?title=%E5%8B%BE%E8%82%A1%E6%95%B0&action=edit&section=1)
+>
+> 以下的方法可用来找出勾股数。设![m>n](https://wikimedia.org/api/rest_v1/media/math/render/svg/637039c4a193f33fee72ebfeb6cb003593696160)、![m](https://wikimedia.org/api/rest_v1/media/math/render/svg/0a07d98bb302f3856cbabc47b2b9016692e3f7bc)和![n](https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b)均是正整数，
+>
+> ![a=m^2-n^2](https://wikimedia.org/api/rest_v1/media/math/render/svg/05c8a0bdacafad1dbf2b6ab213f9c241ce266e88)
+>
+> ![b=2mn](https://wikimedia.org/api/rest_v1/media/math/render/svg/6453fe4f2b30caff73d34afbdd8da1edc95d48f3)
+>
+> ![c=m^2+n^2](https://wikimedia.org/api/rest_v1/media/math/render/svg/cb4269272d3a068ea2d40f4620091aa78a9929f2)
+>
+> 若![m](https://wikimedia.org/api/rest_v1/media/math/render/svg/0a07d98bb302f3856cbabc47b2b9016692e3f7bc)和![n](https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b)是[互质](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%B3%AA)，而且![m](https://wikimedia.org/api/rest_v1/media/math/render/svg/0a07d98bb302f3856cbabc47b2b9016692e3f7bc)和![n](https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b)为一奇一偶，计算出来的![(a,b,c)](https://wikimedia.org/api/rest_v1/media/math/render/svg/ae973a762a92b9cd3eafe7f283890ccfa9b887e8)就是素勾股数。（若![m](https://wikimedia.org/api/rest_v1/media/math/render/svg/0a07d98bb302f3856cbabc47b2b9016692e3f7bc)和![n](https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b)都是[奇数](https://zh.wikipedia.org/wiki/%E5%A5%87%E6%95%B0)，![(a,b,c)](https://wikimedia.org/api/rest_v1/media/math/render/svg/ae973a762a92b9cd3eafe7f283890ccfa9b887e8)就会全是[偶数](https://zh.wikipedia.org/wiki/%E5%81%B6%E6%95%B0)，不符合[互质](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%B3%AA)。）
+>
+> 所有素勾股数可用上述列式当中找出，这亦可推论到数学上存在无穷多的素勾股数。
+>
+> [**例子**](https://zh.wikipedia.org/w/index.php?title=%E5%8B%BE%E8%82%A1%E6%95%B0&action=edit&section=2)
+>
+> 以下是小于 100 的素勾股数：
+>
+> | ![a](https://wikimedia.org/api/rest_v1/media/math/render/svg/ffd2487510aa438433a2579450ab2b3d557e5edc) | ![b](https://wikimedia.org/api/rest_v1/media/math/render/svg/f11423fbb2e967f986e36804a8ae4271734917c3) | ![c](https://wikimedia.org/api/rest_v1/media/math/render/svg/86a67b81c2de995bd608d5b2df50cd8cd7d92455) |
+> | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+> |                              3                               |                              4                               |                              5                               |
+> |                              5                               |                              12                              |                              13                              |
+> |                              7                               |                              24                              |                              25                              |
+> |                              8                               |                              15                              |                              17                              |
+> |                              9                               |                              40                              |                              41                              |
+> |                              11                              |                              60                              |                              61                              |
+> |                              12                              |                              35                              |                              37                              |
+> |                              13                              |                              84                              |                              85                              |
+> |                              16                              |                              63                              |                              65                              |
+> |                              20                              |                              21                              |                              29                              |
+> |                              28                              |                              45                              |                              53                              |
+> |                              33                              |                              56                              |                              65                              |
+> |                              36                              |                              77                              |                              85                              |
+> |                              39                              |                              80                              |                              89                              |
+> |                              48                              |                              55                              |                              73                              |
+> |                              65                              |                              72                              |                              97                              |
+>
+> 让我们把上述列式重组至以下列式：
+>
+> ![a^2=(c-b)(c+b)](https://wikimedia.org/api/rest_v1/media/math/render/svg/08e4ce610ab664282dbaa15cb9f91b8ea8a986f8)
+>
+> 有些勾股数组可以有同一个最小的勾股数。第一个例子是 20 ，它在以下两组勾股数之中出现：![{\displaystyle (20,21,29)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/525694401c1ff2a96482e0acae345dc7b1a50419)与![{\displaystyle (20,99,101)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/a16cf920009789b8b99de013c5c7804f8d8bdddb)。
+>
+> 其中最先例子是5，它在以下两组勾股数之中出现![(3,4,5)](https://wikimedia.org/api/rest_v1/media/math/render/svg/bfdcfb9811db516be2f4628b2171a7721a6edf84)及![{\displaystyle (5,12,13)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/c332e678644795881eb0be44031b183b834fa7f4)。
+>
+> 在 15,386 组素勾股数的 1229779565176982820 ，它的最小与最大的勾股数组是：
+>
+> ![1229779565176982820](https://wikimedia.org/api/rest_v1/media/math/render/svg/7cda38073b3c4abfd585cf61d0240e360591ea75)
+>
+> ![1230126649417435981](https://wikimedia.org/api/rest_v1/media/math/render/svg/79a0ecd3edd4ec5324a2542104598ddc45c48d00)
+>
+> ![1739416382736996181](https://wikimedia.org/api/rest_v1/media/math/render/svg/c4d330c97d3c13306c961e552da18768b3f3cf24)
+>
+> 与
+>
+> ![1229779565176982820](https://wikimedia.org/api/rest_v1/media/math/render/svg/7cda38073b3c4abfd585cf61d0240e360591ea75)
+>
+> ![378089444731722233953867379643788099](https://wikimedia.org/api/rest_v1/media/math/render/svg/98e1ddeef84cd8e8163a4b49769d43199895ea91)
+>
+> ![378089444731722233953867379643788101](https://wikimedia.org/api/rest_v1/media/math/render/svg/f0a58eaa63b03fa8ce2005956fffbb318fe76f0d)
+>
+> 试考虑它的素因数分解
+>
+> ![1229779565176982820 = 2^2\times 3\times 5\times 7\times 11\times 13\times 17\times 19\times 23\times 29\times 31\times 37\times 41\times 43\times 47](https://wikimedia.org/api/rest_v1/media/math/render/svg/d38930899b1cebae001a7c5e74dc89bfceb52ae3)
+>
+> 它素因数的个数涉及不少素勾股数。当然，数学上存在比它大的素勾股数。
+>
+> [性质](https://zh.wikipedia.org/w/index.php?title=%E5%8B%BE%E8%82%A1%E6%95%B0&action=edit&section=3)
+>
+> - ![{\displaystyle \gcd(a,b)=\gcd(b,c)=\gcd(c,a)=\gcd(a,b,c)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/b1d0e4202294bd3c710112630f2e43598b20f38c)
+> - ![(a,b)](https://wikimedia.org/api/rest_v1/media/math/render/svg/d7e5710198f33b00695903460983021e75860e2c)至少一个是3的倍数
+> - ![(a,b)](https://wikimedia.org/api/rest_v1/media/math/render/svg/d7e5710198f33b00695903460983021e75860e2c)至少一个是4的倍数
+> - ![(a,b,c)](https://wikimedia.org/api/rest_v1/media/math/render/svg/ae973a762a92b9cd3eafe7f283890ccfa9b887e8)至少一个是5的倍数
+>
+> [找寻勾股数的小技巧](https://zh.wikipedia.org/w/index.php?title=%E5%8B%BE%E8%82%A1%E6%95%B0&action=edit&section=4)
+>
+> 若需要一组最小数为奇数的勾股数，可任意选取一个 3 或以上的[奇数](https://zh.wikipedia.org/wiki/%E5%A5%87%E6%95%B8)，将该数自乘为[平方数](https://zh.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%95%B8)，除以 2，答案加减 0.5 可得到两个新的数字，这两个数字连同一开始选取的[奇数](https://zh.wikipedia.org/wiki/%E5%A5%87%E6%95%B8)，三者必定形成一组勾股数。但却不一定是以这个选取数字为起首勾股数的唯一可能，例如![{\displaystyle (27,364,365)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2e5e8268651a41702dbbe75345368c2652fc4d3f)并非是以 27 为起首的唯一勾股数，因为存在另一个勾股数是![{\displaystyle (27,36,45)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/39b53df521b0300501cc8a6e9c54af86e9845fd6)，同样也以 27 为首。
+>
+> 对于任何大于1的整数![x](https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4)，![x^{2}+1](https://wikimedia.org/api/rest_v1/media/math/render/svg/92a3a8d23f9f8123651e496dcf8490990c65cf9a),![{\displaystyle x^{2}-1}](https://wikimedia.org/api/rest_v1/media/math/render/svg/3c295fc4a24c9128f6ef2659db9f1579090d9d1e)与![2x](https://wikimedia.org/api/rest_v1/media/math/render/svg/e50b849d3a7cd902f0ae3fa6ad6d1cad49987c39)，三个数必为勾股数，例如：代入![x](https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4)为2，则![x^{2}+1](https://wikimedia.org/api/rest_v1/media/math/render/svg/92a3a8d23f9f8123651e496dcf8490990c65cf9a)为5，![{\displaystyle x^{2}-1}](https://wikimedia.org/api/rest_v1/media/math/render/svg/3c295fc4a24c9128f6ef2659db9f1579090d9d1e)为3，![2x](https://wikimedia.org/api/rest_v1/media/math/render/svg/e50b849d3a7cd902f0ae3fa6ad6d1cad49987c39)为4，![(3,4,5)](https://wikimedia.org/api/rest_v1/media/math/render/svg/bfdcfb9811db516be2f4628b2171a7721a6edf84)为一组勾股数。
+>
+> [推广](https://zh.wikipedia.org/w/index.php?title=%E5%8B%BE%E8%82%A1%E6%95%B0&action=edit&section=5)
+>
+> [费马最后定理](https://zh.wikipedia.org/wiki/%E8%B4%B9%E9%A9%AC%E6%9C%80%E5%90%8E%E5%AE%9A%E7%90%86)指出，若![a^{n}+b^{n}=c^{n}](https://wikimedia.org/api/rest_v1/media/math/render/svg/1a2e31ced64b8cef38ab186ec86755ecc47c861f)，而![n](https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b)是大于 2 的整数，![(a,b,c)](https://wikimedia.org/api/rest_v1/media/math/render/svg/ae973a762a92b9cd3eafe7f283890ccfa9b887e8)即没有正整数解。
