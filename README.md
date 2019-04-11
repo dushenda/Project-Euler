@@ -414,23 +414,78 @@ Find the sum of all the primes below two million.
 >
 > 埃拉托斯特尼筛法，可以用以下的[伪代码](https://zh.wikipedia.org/wiki/%E4%BC%AA%E4%BB%A3%E7%A0%81)来表示：
 >
-> ```
+> ```c
 > Input: an integer n > 1
->  
+> 
 > Let A be an array of Boolean values, indexed by integers 2 to n,
 > initially all set to true.
+> 
+> for i = 2, 3, 4, ..., not exceeding 
+> 
 >  
->  for i = 2, 3, 4, ..., not exceeding 
->   
->     
->     {\displaystyle {\sqrt {n}}}
->   
+>  {\displaystyle {\sqrt {n}}}
+> 
 > :
->   if A[i] is true:
->     for j = i2, i2+i, i2+2i, i2+3i, ..., not exceeding n :
->       A[j] := false
->  
+> if A[i] is true:
+>  for j = i2, i2+i, i2+2i, i2+3i, ..., not exceeding n :
+>    A[j] := false
+> 
 > Output: all i such that A[i] is true.
 > ```
 >
 > 以上算法可以得到小于等于*n*的所有[素数](https://zh.wikipedia.org/wiki/%E8%B3%AA%E6%95%B8)，它的复杂度是O(*n* log log *n*)。
+>
+> 所以，在大数目素数筛选的时候，采用这个算法的复杂第是很高的。
+
+使用 MATLAB 只需要调用一个函数即可
+
+```matlab
+sum(primes(2000000))
+```
+
+`primes` 函数：
+
+```matlab
+function p = primes(n)
+%PRIMES Generate list of prime numbers.
+%   PRIMES(N) is a row vector of the prime numbers less than or 
+%   equal to N.  A prime number is one that has no factors other
+%   than 1 and itself.
+%
+%   Class support for input N:
+%      float: double, single
+%      integer: uint8, int8, uint16, int16, uint32, int32, uint64, int64
+%
+%   See also FACTOR, ISPRIME.
+
+%   Copyright 1984-2013 The MathWorks, Inc. 
+
+if ~isscalar(n) 
+  error(message('MATLAB:primes:InputNotScalar'));
+elseif ~isreal(n)
+  error(message('MATLAB:primes:ComplexInput'));
+end
+if n < 2
+  p = zeros(1,0,class(n)); 
+  return
+elseif isfloat(n) && n > flintmax(class(n))
+  warning(message('MATLAB:primes:NGreaterThanFlintmax'));
+  n = flintmax(class(n));  
+end
+n = floor(n);
+p = true(1,double(ceil(n/2)));
+q = length(p);
+if (isa(n,'uint64') || isa(n,'int64')) && n > flintmax
+  ub = 2.^(nextpow2(n)/2);  %avoid casting large (u)int64 to double
+else
+  ub = sqrt(double(n));
+end
+for k = 3:2:ub
+  if p((k+1)/2)
+     p(((k*k+1)/2):k:q) = false;
+  end
+end
+p = cast(find(p)*2-1,class(n));
+p(1) = 2;
+```
+
