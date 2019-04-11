@@ -6,3 +6,6 @@ for i=1:max(size(x))
     x = x(p~=0);
 end
 sum(x)
+
+% ÄÚÖÃº¯Êı£¬Ôô¿ì
+sum(primes(2000000))
