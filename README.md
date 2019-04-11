@@ -489,3 +489,21 @@ p = cast(find(p)*2-1,class(n));
 p(1) = 2;
 ```
 
+在上述程序中：
+
+- `P = nextpow2(A)` 返回对 A 中每个元素满足
+  2*^p^*≥|A|
+
+- B = cast(A,newclass) 将 A 转换为类 newclass，其中 newclass 是与 A 兼容的内置数据类型的名称。cast 函数截断 A 中太大而无法映射到 newclass 的任何值。
+  B = cast(A,'like',p) 将 A 转换为与变量 p 相同的数据类型和稀疏性。如果 A 和 p 都为实数，则 B 也为实数。否则，B 为复数。
+- 算法核心部分是：
+
+```matlab
+for k = 3:2:ub
+  if p((k+1)/2)
+     p(((k*k+1)/2):k:q) = false;
+  end
+end
+p = cast(find(p)*2-1,class(n));
+```
+
