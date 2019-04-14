@@ -515,6 +515,12 @@ end
 p = cast(find(p)*2-1,class(n));
 ```
 
+> [**测试素数与整数分解**](https://zh.wikipedia.org/wiki/%E7%B4%A0%E6%95%B0)
+>
+> ------
+>
+> ![](./img/P9_3.png)
+
 ## [11.Largest product in a grid](https://projecteuler.net/problem=11)
 
 In the 20×20 grid below, four numbers along a diagonal line have been marked in red.
