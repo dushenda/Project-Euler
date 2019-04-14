@@ -12,13 +12,18 @@ tic
 sum(primes(2000000))
 toc
 
-% limit = 2000000
-% sum = 5 % we know that 2 and 3 are prime
-% n = 5
-% while n <= limit
-% if isPrime(n) then sum := sum+n
-% n := n+2
-% if n <= limit and isPrime(n) then sum := sum+n
-% n := n+4
-% end while
-% output sum
+% ÊÔ³ý·¨
+N = 27;
+flag = 1;
+i = 3;
+if(mod(N,2)==0)
+    flag = 0;
+else
+while(i^2 < N)
+    if(mod(N,i)==0)
+        flag = 0;
+        break
+    end
+    i=i+2;
+end
+end
