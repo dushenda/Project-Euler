@@ -219,6 +219,68 @@ What is the 10 001st prime number?
 
 > ![P7_3](./img/P7_3.png)
 
+为什么除了2、3，素数都是可以写成 (6k±1)？
+
+> [***Is every prime number other than 2 and 3 of the form (6k±1)? Is this a proven result? What are other resources about it?***](https://www.quora.com/Is-every-prime-number-other-than-2-and-3-of-the-form-6k%C2%B11-Is-this-a-proven-result-What-are-other-resources-about-it)
+>
+> ![](./img/P7_4.png)
+
+***素数试除法***
+
+用来验证一个数是否为素数。
+
+1. 对于一个数 N，首先可以判断 N 是否为偶数，也就是是否被 2 整除，如果是偶数，那么一定不是素数。
+
+2. 只要 N 不能被 ceil($\sqrt n$) 前面的数所整除，也就是根号 n 上取整前面的数所整除，那么该数是素数，下面来证明此结论
+
+   ![P9_4](D:/ys_matlab/ExamEuler/img/P9_4.png)
+
+3. 所以需要首先判断是否是偶数，如果不是，从 3 开始，步长为 2 到 根号 n 上取整判断能否为 N 所整除即可，复杂度为 O($\sqrt n$)。
+
+C++代码
+
+```c++
+#include<iostream>
+
+int main()
+{
+    int N;
+    std::cin>>N;
+    int flag = 1;
+    if(N%2==0)  flag = 0;
+    if(N%3==0)  flag = 0;
+    for(int i=5;i*i<N;i=i+6)
+    {
+        if(N%i==0)      {flag=0;break;}
+        if(N%(i+2)==0)  {flag=0;break;}
+    }
+    if(flag == 1)
+        std::cout<<N<<" is a Prime";
+    else    
+        std::cout<<N<<" is not a Prime";          
+    return 0;
+}
+```
+
+MATLAB 代码
+
+```matlab
+N = 27;
+flag = 1;
+i = 3;
+if(mod(N,2)==0 && mod(N,2) == 0)
+    flag = 0;
+else
+while(i^2 < N)
+    if(mod(N,i)==0)
+        flag = 0;
+        break
+    end
+    i=i+6;
+end
+end
+```
+
 ## [8.Largest product in a series](https://projecteuler.net/problem=8)
 
 The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.
@@ -529,60 +591,6 @@ p = cast(find(p)*2-1,class(n));
 > ------
 >
 > ![](./img/P9_3.png)
-
-***素数试除法***
-
-用来验证一个数是否为素数。
-
-1. 对于一个数 N，首先可以判断 N 是否为偶数，也就是是否被 2 整除，如果是偶数，那么一定不是素数。
-
-2. 只要 N 不能被 ceil($\sqrt n$) 前面的数所整除，也就是根号 n 上取整前面的数所整除，那么该数是素数，下面来证明此结论
-
-   ![P9_4](./img/P9_4.png)
-
-3. 所以需要首先判断是否是偶数，如果不是，从 3 开始，步长为 2 到 根号 n 上取整判断能否为 N 所整除即可，复杂度为 O($\sqrt n$)。
-
-`C++ 代码`
-
-```c++
-#include<iostream>
-
-int main()
-{
-    int N;
-    std::cin>>N;
-    int flag = 1;
-    if(N%2==0)  flag = 0;
-    for(int i=3;i*i<N;i=i+2)
-    {
-        if(N%i==0) {flag=0;break;}
-    }
-    if(flag == 1)
-        std::cout<<N<<" is a Prime";
-    else    
-        std::cout<<N<<" is not a Prime";          
-    return 0;
-}
-```
-
-`MATLAB 代码`
-
-```matlab
-N = 27;
-flag = 1;
-i = 3;
-if(mod(N,2)==0)
-    flag = 0;
-else
-while(i^2 < N)
-    if(mod(N,i)==0)
-        flag = 0;
-        break
-    end
-    i=i+2;
-end
-end
-```
 
 ## [11.Largest product in a grid](https://projecteuler.net/problem=11)
 

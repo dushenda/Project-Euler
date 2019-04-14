@@ -16,7 +16,7 @@ toc
 N = 27;
 flag = 1;
 i = 3;
-if(mod(N,2)==0)
+if(mod(N,2)==0 && mod(N,2) == 0)
     flag = 0;
 else
 while(i^2 < N)
@@ -24,6 +24,6 @@ while(i^2 < N)
         flag = 0;
         break
     end
-    i=i+2;
+    i=i+6;
 end
 end
