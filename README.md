@@ -237,7 +237,7 @@ What is the 10 001st prime number?
 
 2. 只要 N 不能被 ceil($\sqrt n$) 前面的数所整除，也就是根号 n 上取整前面的数所整除，那么该数是素数，下面来证明此结论
 
-   ![P9_4](D:/ys_matlab/ExamEuler/img/P9_4.png)
+   ![P9_4](.\img\P9_4.png)
 
 3. 所以需要首先判断是否是偶数，如果不是，从 3 开始，步长为 2 到 根号 n 上取整判断能否为 N 所整除即可，复杂度为 O($\sqrt n$)。
 
