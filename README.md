@@ -1,5 +1,9 @@
 # [Project Euler](https://projecteuler.net/archives)
 
+算法的意义是干掉所有的重复计算。
+
+——沃·兹基硕德
+
 > ## About Project Euler
 >
 > ### Where should I start?
@@ -466,6 +470,8 @@ Find the sum of all the primes below two million.
 >    - 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
 > 4. 如果现在这个序列中最大数小于等于最后一个标出的素数的平方，那么剩下的序列中所有的数都是质数，否则回到第二步。
 >
+> ![](./img/P10_2.png)
+>
 > ------
 >
 > 1. 本例中，因为25大于2的平方，我们返回第二步：
@@ -493,13 +499,13 @@ Find the sum of all the primes below two million.
 > 
 > for i = 2, 3, 4, ..., not exceeding 
 > 
->  
->  {\displaystyle {\sqrt {n}}}
+> 
+> {\displaystyle {\sqrt {n}}}
 > 
 > :
 > if A[i] is true:
->  for j = i2, i2+i, i2+2i, i2+3i, ..., not exceeding n :
->    A[j] := false
+> for j = i2, i2+i, i2+2i, i2+3i, ..., not exceeding n :
+> A[j] := false
 > 
 > Output: all i such that A[i] is true.
 > ```
@@ -591,6 +597,30 @@ p = cast(find(p)*2-1,class(n));
 > ------
 >
 > ![](./img/P9_3.png)
+
+***素数求和***
+
+> ![](./img/P10_3.png)
+
+简单的素数求和
+
+***A first implementation of The sieve of Eratosthenes***
+
+> ![P10_4](./img/P10_4.png)
+
+对于埃拉托斯妮特素数筛选法的第一次实现：
+
+1. 限定要得到素数的范围 `limit`，确定 `limit` 的最大的素数因子的最大范围 `crosslimit`
+2. 建立一个数组 `sieve`用来存储是否该数被筛去，初始都为被筛去，赋值 `false`
+3. 初步划分奇偶数，因为偶数一定不是素数，所以可以直接筛去
+4. 对于从 3 开始的每个数 p 用作因子进行筛选，步长为 `2p`（原因：因为因子 `2` 已经被筛去，所以如果 `p` 非一个数的因子，那么 `p+p=2p` 肯定也不会是一个数的因子），筛选起始点为 p^2^ （原因：如果有一个数小于 p^2^设为`kp`，则 `k <p` ，则在 k 的时候就已经被筛选过了，所以只需要从 p^2^开始筛选即可），这也就是两个循环的由来，筛选的数的中点也就是有一个数一开始筛选就到了 `limit`，即 `p == crosslimit` 的时候
+5. 对于未筛去的数求和，依靠判别向量
+
+***Optimising the sieve***
+
+> ![P10_5](./img/P10_5.png)
+
+
 
 ## [11.Largest product in a grid](https://projecteuler.net/problem=11)
 
