@@ -210,6 +210,15 @@ What is the 10 001st prime number?
 
 那么第 10001 个素数是多少。
 
+> ***Problem 7***
+> ***Find the 10001st prime***
+>
+> ![](./img/P7_1.png)
+
+> ![](./img/P7_2.png)
+
+> ![P7_3](./img/P7_3.png)
+
 ## [8.Largest product in a series](https://projecteuler.net/problem=8)
 
 The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.
@@ -531,7 +540,7 @@ p = cast(find(p)*2-1,class(n));
 
    ![P9_4](./img/P9_4.png)
 
-3. 所以需要首先判断是否是偶数，如果不是，从 3 开始，步长为 2 到 根号 n 上取整判断能否为 N 所整除即可。
+3. 所以需要首先判断是否是偶数，如果不是，从 3 开始，步长为 2 到 根号 n 上取整判断能否为 N 所整除即可，复杂度为 O($\sqrt n$)。
 
 `C++ 代码`
 
