@@ -440,7 +440,15 @@ Find the sum of all the primes below two million.
 使用 MATLAB 只需要调用一个函数即可
 
 ```matlab
+>> tic
 sum(primes(2000000))
+toc
+
+ans =
+
+   1.4291e+11
+
+时间已过 0.017074 秒。
 ```
 
 `primes` 函数：
